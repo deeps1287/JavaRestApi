@@ -46,9 +46,9 @@ public class BucketListController {
 
     // 商品検索 POST REQUEST 1 
     @PostMapping(value = "/rest/fits")
-    public ResponseEntity shohinKensaku(@RequestParam(value="UserMark") String UserMark,
-    		@RequestParam(value="Khkbn") String Khkbn,
-    		@RequestParam(value="Searchkey") String Searchkey,
+    public ResponseEntity shohinKensaku(@RequestParam(required = false) String UserMark,
+    		@RequestParam(required = false) String Khkbn,
+    		@RequestParam(required = false) String Searchkey,
     		@RequestParam(required = false) String latitude,
     		@RequestParam(required = false) String longitude
     		) {
