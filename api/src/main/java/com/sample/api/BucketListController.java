@@ -44,20 +44,9 @@ public class BucketListController {
         return ResponseEntity.ok(myBucketList);
     }
 
-    // 商品検索 POST REQUEST 1 
-    @PostMapping(value = "/rest/fits")
-    public ResponseEntity shohinKensaku(@RequestParam(required = false) String UserMark,
-    		@RequestParam(required = false) String Khkbn,
-    		@RequestParam(required = false) String Searchkey,
-    		@RequestParam(required = false) String latitude,
-    		@RequestParam(required = false) String longitude
-    		) {
-        return ResponseEntity.ok(myProducDetails);
-    }
-
-    // 商品検索 POST REQUEST 2
+    // 商品検索 POST REQUEST 1
     // Just name change
-    @PostMapping(value = "/rest/fits1")
+    @PostMapping(value = "/rest/fits")
     public ResponseEntity shohinKensaku1(@RequestParam(value="UserMark") String UserMark,
     		@RequestParam(value="Khkbn") String Khkbn,
     		@RequestParam(value="Searchkey") String Searchkey,
@@ -67,24 +56,17 @@ public class BucketListController {
         return ResponseEntity.ok(myProducDetails);
     }
    
-    // 商品検索 POST REQUEST 3
+    // 商品検索 POST REQUEST 2
     // ALL Five param are mandetory
-    @PostMapping(value = "/rest/fits2")
-    public ResponseEntity shohinKensaku2(@RequestParam(value="UserMark") String UserMark,
-    		@RequestParam(value="Khkbn") String Khkbn,
-    		@RequestParam(value="Searchkey") String Searchkey,
-    		@RequestParam(value="latitude") String latitude,
-    		@RequestParam(value="longitude") String longitude
+    @PostMapping(value = "/rest/fits1")
+    public ResponseEntity shohinKensaku2(@RequestParam(value="Searchkey") String UserMark,
+    		@RequestParam(value="Skucode") String Khkbn
     		) {
         return ResponseEntity.ok(myProducDetails);
     }
+ 
     
-    
-    
-    
-    
-    
-    
+        
 //    @PutMapping(value = "/")
 //    public ResponseEntity updateBucketList(@RequestParam(value="name") String name, @RequestParam(value="id") Long id) {
 //        myBucketList.forEach(bucketList ->  {
